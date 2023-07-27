@@ -1,0 +1,27 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <style>
+        form{
+            width: 400px;
+            padding: 20px;
+        }
+
+        input{
+            margin: 10px 0px;
+            padding: 10px;
+            display: inline;
+            width: 80%;
+        }
+    </style>
+
+    <form method="POST">
+        {%csrf_token%}
+        <input type="text" name="name" placeholder="NAME">
+        <input type="text" name="category" placeholder="CATEGORY">
+        <input type="text" name="price" placeholder="PRICE">
+        <input type="text" name="details" placeholder="DETAILS">
+    </form>
+
+{% endblock content %}
